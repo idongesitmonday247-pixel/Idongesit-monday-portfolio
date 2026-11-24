@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Idongesit Monday | Virtual Assistant and Customer Support Specialist</title>
+<meta name="description" content="Idongesit Monday, virtual assistant and customer support specialist with hands-on operations experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF8F3;--accent:#0E5C4A;--text:#14211F;--gold:#C9972B;--card:#EFE8DB;--muted:#4F5F5A}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;animation:pageIn .9s ease both}
+@keyframes pageIn{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;font-weight:700}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* navigation */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(251,248,243,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(20,33,31,.1)}
+.nav-in{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:var(--accent);text-decoration:none}
+.links{display:flex;gap:28px;list-style:none}
+.links a{text-decoration:none;font-size:.93rem;font-weight:500;position:relative;padding:4px 0}
+.links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .3s}
+.links a:hover::after{width:100%}
+.menu-btn{display:none;background:none;border:1.5px solid var(--accent);color:var(--accent);padding:6px 14px;border-radius:99px;font:600 .85rem Inter,sans-serif;cursor:pointer}
+
+/* buttons */
+.btn{display:inline-block;padding:13px 28px;border-radius:99px;font-weight:600;font-size:.95rem;text-decoration:none;border:2px solid var(--accent);transition:transform .3s,box-shadow .3s,background .3s,color .3s}
+.btn:hover{transform:scale(1.08);box-shadow:0 10px 24px rgba(14,92,74,.22)}
+.btn-fill{background:var(--accent);color:#fff}
+.btn-line{color:var(--accent)}
+.btn-line:hover{background:var(--accent);color:#fff}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:96px 0 56px;background:radial-gradient(ellipse at 88% 18%,var(--card),transparent 55%)}
+.hero-in{display:grid;grid-template-columns:1.5fr .7fr;gap:48px;align-items:center}
+h1{font-size:clamp(3.2rem,9vw,6.4rem);color:var(--accent);letter-spacing:-.02em;margin-bottom:22px}
+.tagline{display:flex;flex-wrap:wrap;gap:6px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;margin-bottom:20px}
+.tagline span{padding-right:16px;margin-right:16px;border-right:2px solid var(--gold)}
+.tagline span:last-child{border:0;margin:0;padding:0}
+.bio{max-width:520px;color:var(--muted);font-size:1.05rem;margin-bottom:32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.arch{aspect-ratio:3/4;border:2px solid var(--gold);border-radius:999px 999px 18px 18px;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--accent);box-shadow:14px 14px 0 var(--accent)}
+.arch b{font:700 4.4rem 'Playfair Display',serif}
+.arch small{font-size:.85rem;color:var(--muted);text-align:center;padding:0 18px}
+
+/* sections */
+section{padding:96px 0}
+h2{font-size:clamp(2rem,4.5vw,2.8rem);color:var(--accent);margin-bottom:12px}
+h2::after{content:"";display:block;width:64px;height:3px;background:var(--gold);margin-top:14px}
+.lead{color:var(--muted);max-width:600px;margin:18px 0 40px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:start;margin-top:32px}
+.about-grid p{margin-bottom:16px;max-width:560px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat{border:2px solid var(--gold);border-radius:60px 60px 14px 14px;padding:26px 18px 20px;text-align:center;background:var(--bg);transition:transform .3s,background .3s}
+.stat:hover{transform:scale(1.07);background:var(--card)}
+.stat b{display:block;font:700 2.4rem 'Playfair Display',serif;color:var(--accent)}
+.stat span{font-size:.85rem;color:var(--muted);display:block;line-height:1.4}
+
+/* case studies */
+.cases{background:var(--card);border-radius:48px 48px 0 0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.case{background:var(--bg);border-radius:6px 28px 6px 28px;padding:28px 24px;border-top:4px solid var(--gold);transition:transform .35s,box-shadow .35s}
+.case:hover{transform:scale(1.05);box-shadow:0 18px 40px rgba(20,33,31,.14)}
+.tag{display:inline-block;font-size:.78rem;font-weight:600;color:var(--accent);background:var(--card);padding:4px 12px;border-radius:99px;margin-bottom:14px}
+.case h3{font-size:1.4rem;margin-bottom:14px}
+.case dt{font-weight:600;color:var(--accent);font-size:.9rem;margin-top:12px}
+.case dd{font-size:.95rem;color:var(--muted)}
+.case dd.res{color:var(--text);border-left:3px solid var(--gold);padding-left:12px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.skill{display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--card);border-radius:99px;font-weight:500;transition:transform .3s,background .3s,color .3s}
+.skill:hover{transform:scale(1.07);background:var(--accent);color:#fff}
+.skill i{flex:none;width:44px;height:44px;border-radius:50%;background:var(--accent);display:grid;place-items:center;transition:background .3s}
+.skill:hover i{background:var(--gold)}
+.skill svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* tools */
+.tools-wrap{background:var(--card)}
+.tool-group{margin-bottom:34px}
+.tool-group h3{font-size:1.15rem;margin-bottom:6px}
+.tool-group p{color:var(--muted);font-size:.92rem;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{display:inline-flex;align-items:center;gap:10px;background:var(--bg);padding:8px 18px 8px 8px;border-radius:99px;font-weight:500;font-size:.95rem;transition:transform .3s,box-shadow .3s}
+.chip:hover{transform:scale(1.1);box-shadow:0 8px 20px rgba(20,33,31,.14)}
+.chip b{width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:.85rem}
+.chips.soft .chip b{background:var(--gold)}
+
+/* contact */
+.contact{background:var(--accent);color:#fff;text-align:center;border-radius:48px 48px 0 0}
+.contact h2{color:#fff}
+.contact h2::after{margin:14px auto 0}
+.contact .lead{margin:18px auto 34px;color:#d9e6e1}
+.contact .cta{justify-content:center}
+.contact .btn{border-color:var(--gold)}
+.contact .btn-fill{background:var(--gold);color:var(--text)}
+.contact .btn-line{color:#fff}
+.contact .btn-line:hover{background:var(--gold);color:var(--text)}
+footer{background:var(--accent);color:#bcd2cb;text-align:center;padding:0 0 32px;font-size:.85rem}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+.grid3 .reveal:nth-child(2){transition-delay:.12s}.grid3 .reveal:nth-child(3){transition-delay:.24s}
+
+@media(max-width:860px){
+ .hero-in,.about-grid,.grid3{grid-template-columns:1fr}
+ .arch{max-width:240px;margin:0 auto;box-shadow:10px 10px 0 var(--accent)}
+ .menu-btn{display:block}
+ .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);padding:8px 22px 18px;border-bottom:1px solid rgba(20,33,31,.1)}
+ .links.open{display:flex}
+ .links a{display:block;padding:12px 0}
+ section{padding:72px 0}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *{animation:none!important;transition:none!important}
+ .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="wrap nav-in">
+  <a class="logo" href="#home">Idongesit Monday</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">Menu</button>
+  <ul class="links" id="links">
+   <li><a href="#about">About</a></li>
+   <li><a href="#case-studies">Case studies</a></li>
+   <li><a href="#skills">Skills</a></li>
+   <li><a href="#tools">Tools</a></li>
+   <li><a href="#contact">Contact</a></li>
+  </ul>
+ </div>
+</nav>
+
+<header class="hero" id="home">
+ <div class="wrap hero-in">
+  <div>
+   <h1>Idongesit Monday</h1>
+   <p class="tagline"><span>Hands-on operations experience</span><span>Customer-first</span><span>Remote support-ready</span></p>
+   <p class="bio">I keep customers happy and calendars organized for business owners. After running my own wig-making business on my own for three years, I now bring that hands-on experience to remote virtual assistant and customer support roles.</p>
+   <div class="cta">
+    <a class="btn btn-fill" href="#case-studies">View my case studies</a>
+    <a class="btn btn-line" href="#contact">Contact me</a>
+   </div>
+  </div>
+  <div class="arch" aria-hidden="true"><b>IM</b><small>Virtual assistant and customer support</small></div>
+ </div>
+</header>
+
+<section id="about">
+ <div class="wrap">
+  <h2 class="reveal">About</h2>
+  <div class="about-grid">
+   <div class="reveal">
+    <p>For three years I ran my own wig-making and styling business, handling customer support, orders, scheduling, content and delivery by myself. It taught me how to keep customers happy and a business running without anyone checking my work.</p>
+    <p>I hold a BSc in Marketing and worked as a clinic clerk, managing appointments and records. I have also trained in virtual assistance, customer service, CRM and workflow automation with the Digital Witch Support Community.</p>
+    <p>Today I focus on remote virtual assistance and customer support, backed by practice projects in Zendesk, HubSpot, Monday.com and Slack.</p>
+   </div>
+   <div class="stats reveal">
+    <div class="stat"><b>3+</b><span>Years running my own business</span></div>
+    <div class="stat"><b>3</b><span>Case studies</span></div>
+    <div class="stat"><b>2</b><span>Certifications: Google Digital Marketing and E-commerce; Digital Witch In-Demand IT Skills</span></div>
+    <div class="stat"><b>4</b><span>Practice systems built</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="cases" id="case-studies">
+ <div class="wrap">
+  <h2 class="reveal">Case studies</h2>
+  <p class="lead reveal">Three projects, each built around a real problem. Practice projects are labeled as such.</p>
+  <div class="grid3">
+   <article class="case reveal">
+    <span class="tag">Iduela Artistry, simulated project</span>
+    <h3>Scheduling and meetings</h3>
+    <dl>
+     <dt>Challenge</dt><dd>Inquiries arrived from many places and booking took a long back-and-forth.</dd>
+     <dt>Approach</dt><dd>Lead form, Calendly booking, Zapier follow-up email, HubSpot log and a Slack meeting workflow.</dd>
+     <dt>Result</dt><dd class="res">One booking link, with every lead logged with its source.</dd>
+    </dl>
+   </article>
+   <article class="case reveal">
+    <span class="tag">Iduela Artistry and Iduela Digital Marketing Agency, simulated projects</span>
+    <h3>Customer support and CRM</h3>
+    <dl>
+     <dt>Challenge</dt><dd>Customer issues and lead information were scattered, so follow-up depended on memory.</dd>
+     <dt>Approach</dt><dd>A Zendesk support desk with templates and refund handling, plus a HubSpot CRM with tickets and dashboards.</dd>
+     <dt>Result</dt><dd class="res">13 sample tickets tracked from start to resolution, plus 3 dashboards.</dd>
+    </dl>
+   </article>
+   <article class="case reveal">
+    <span class="tag">Iduela Artistry, retrospective of my own business</span>
+    <h3>Project management and automation</h3>
+    <dl>
+     <dt>Challenge</dt><dd>Orders, payments and leads were tracked in a notebook, so deadlines were at risk.</dd>
+     <dt>Approach</dt><dd>Monday.com boards, Slack alerts and a Zapier-to-Trello automation.</dd>
+     <dt>Result</dt><dd class="res">6 automations, all tested and passing, plus a restricted payments board.</dd>
+    </dl>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="wrap">
+  <h2 class="reveal">Skills</h2>
+  <p class="lead reveal">What I can take off your plate.</p>
+  <div class="skills reveal" id="skillGrid"></div>
+ </div>
+</section>
+
+<section class="tools-wrap" id="tools">
+ <div class="wrap">
+  <h2 class="reveal">Tools</h2>
+  <div class="tool-group reveal" style="margin-top:32px">
+   <h3>Used in my projects</h3>
+   <p>Each of these has a screenshot and a case study behind it.</p>
+   <div class="chips" id="toolsUsed"></div>
+  </div>
+  <div class="tool-group reveal">
+   <h3>Also trained in or exploring</h3>
+   <p>I learn new tools quickly and practice before I start with a new team.</p>
+   <div class="chips soft" id="toolsMore"></div>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap">
+  <h2 class="reveal">Let's work together</h2>
+  <p class="lead reveal">Looking for support with customers, calendars or inboxes? Send me a message.</p>
+  <div class="cta reveal">
+   <a class="btn btn-fill" href="mailto:idongesitmonday247@gmail.com">Email me</a>
+   <a class="btn btn-line" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </div>
+ </div>
+</section>
+<footer>&copy; 2026 Idongesit Monday</footer>
+
+<script>
+(function(){
+ var icons={
+  headset:'<path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 14v3a2 2 0 0 1-2 2h-1v-6h3z"/><path d="M3 14v3a2 2 0 0 0 2 2h1v-6H3z"/>',
+  mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+  calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+  board:'<rect x="3" y="4" width="5" height="16" rx="1"/><rect x="10" y="4" width="5" height="10" rx="1"/><rect x="17" y="4" width="4" height="6" rx="1"/>',
+  funnel:'<path d="M3 4h18l-7 8v6l-4 2v-8z"/>',
+  people:'<circle cx="9" cy="8" r="3.5"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M22 21v-2a5 5 0 0 0-3-4.5"/>'
+ };
+ var skills=[["headset","Customer support"],["mail","Email management"],["calendar","Calendar management"],["clock","Appointment setting and scheduling"],["bolt","Workflow automation"],["board","Project management"],["funnel","Lead generation"],["people","Customer relationship management"]];
+ document.getElementById("skillGrid").innerHTML=skills.map(function(s){
+  return '<div class="skill"><i><svg viewBox="0 0 24 24" aria-hidden="true">'+icons[s[0]]+'</svg></i>'+s[1]+'</div>';
+ }).join("");
+
+ function chips(id,list){
+  document.getElementById(id).innerHTML=list.map(function(t){return '<span class="chip"><b>'+t.charAt(0)+'</b>'+t+'</span>';}).join("");
+ }
+ chips("toolsUsed",["HubSpot","Zendesk","Monday.com","Trello","Calendly","Zapier","Slack","Google Suite","Gmail"]);
+ chips("toolsMore",["Freshdesk","ClickUp","PickTime","Apollo.io"]);
+
+ var btn=document.getElementById("menuBtn"),links=document.getElementById("links");
+ btn.addEventListener("click",function(){var o=links.classList.toggle("open");btn.setAttribute("aria-expanded",o);});
+ links.addEventListener("click",function(e){if(e.target.tagName==="A"){links.classList.remove("open");btn.setAttribute("aria-expanded","false");}});
+
+ var items=document.querySelectorAll(".reveal");
+ if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target);}});},{threshold:.15});
+  items.forEach(function(el){io.observe(el);});
+ }else{items.forEach(function(el){el.classList.add("in");});}
+})();
+</script>
+</body>
+</html>
